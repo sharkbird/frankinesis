@@ -1,6 +1,6 @@
 QMK map for Kinesis Essential modded to use Raspberry Pi Pico.  The thumb pad traces are cut and rewired in order to have a simple 12x6 grid.  I am currently not using the membrane function keys as I have a layer that I am more comfortable using.
 
-There two additional rows for adding additional keys eventually.
+There are two additional rows for adding additional keys eventually.
 
 Most of the configuration is in the info.json at the root level.
 
