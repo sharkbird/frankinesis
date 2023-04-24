@@ -31,7 +31,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_GRV,         KC_A,           KC_O,           KC_E,           KC_U,                 KC_I,                   KC_D,           KC_H,           KC_T,          KC_N,           KC_S,            KC_MINS,
   KC_LSFT,        KC_SCLN,        KC_Q,           KC_J,           KC_K,                 KC_X,                   KC_B,           KC_M,           KC_W,          KC_V,           KC_Z,            KC_RSFT,
   KC_NO,          KC_LCTL,        KC_LGUI,        KC_LEFT,        KC_RIGHT,             KC_RIGHT,               KC_UP,          KC_UP,          KC_DOWN,       KC_LBRC,        KC_RCTL,          KC_NO,
-  KC_LALT,        KC_HOME,        KC_END,         KC_LGUI,        LT(_MOUSE, KC_DEL), LT(_SYMNUM,  KC_BSPC),               LT(_SYMNUM, KC_SPACE), LT(_MOUSE, KC_ENTER), KC_LGUI,      KC_PGDN,        KC_PGUP,         KC_RALT,
+  KC_LALT,        KC_HOME,        LT(_MOUSE,KC_END), KC_LCTL,  LGUI_T(KC_DEL),          LT(_SYMNUM, KC_BSPC),   LT(_SYMNUM, KC_SPACE), LGUI_T(KC_ENTER), KC_LCTL, LT(_MOUSE,KC_PGDN),        KC_PGUP,         KC_RALT,
+//  KC_LALT,        KC_HOME,        KC_END,         KC_LGUI,        LT(_MOUSE, KC_DEL), LT(_SYMNUM,  KC_BSPC),               LT(_SYMNUM, KC_SPACE), LT(_MOUSE, KC_ENTER), KC_LGUI,      KC_PGDN,        KC_PGUP,         KC_RALT,
   KC_NO,          KC_NO,         KC_NO,        KC_NO,        KC_NO,               KC_NO,               KC_NO,          KC_NO,        KC_NO,      KC_NO,         KC_NO,           KC_NO,
   KC_NO,          KC_NO,         KC_NO,        KC_NO,        KC_NO,               KC_NO,               KC_NO,          KC_NO,        KC_NO,      KC_NO,         KC_NO,           KC_NO
  ),
@@ -50,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_MOUSE] = LAYOUT_kinesis(
 
    XXXXXXX,       XXXXXXX,        XXXXXXX,        KC_MS_WH_UP,    LCTL(KC_X),  XXXXXXX,         XXXXXXX,        XXXXXXX,       XXXXXXX,        XXXXXXX,         XXXXXXX,       XXXXXXX,
-   LGUI(KC_Z),    LCTL(KC_Z),     SCTL(KC_C),     KC_MS_UP,       LCTL(KC_C),  KC_MS_BTN4,      XXXXXXX,        XXXXXXX,       ALL_T(KC_NO),   MEH_T(KC_NO),    SCMD_T(KC_NO), XXXXXXX,
+   LGUI(KC_Z),    LCTL(KC_Z),     KC_MS_BTN1,     KC_MS_UP,       KC_MS_BTN2,   KC_MS_BTN4,      XXXXXXX,        XXXXXXX,       ALL_T(KC_NO),   MEH_T(KC_NO),    SCMD_T(KC_NO), XXXXXXX,
    KC_MS_BTN3,    KC_MS_WH_LEFT,  KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT, KC_MS_WH_RIGHT,  XXXXXXX,        _______,       KC_MS_ACCEL1,   KC_LSFT,         KC_LCTL,       KC_MS_ACCEL2,
    LGUI(KC_Z),    LCTL(KC_Y),     SCTL(KC_V),     KC_MS_WH_DOWN,  LCTL(KC_V),  KC_MS_BTN5,      XXXXXXX,        XXXXXXX,       GUI_T(KC_NO),   KC_LALT,         KC_RALT,       XXXXXXX,
    KC_SCRL,       XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,     XXXXXXX,         XXXXXXX,        XXXXXXX,       XXXXXXX,        XXXXXXX,         XXXXXXX,       XXXXXXX, 
@@ -94,4 +95,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     }
     return true;
+};
+const uint16_t PROGMEM test_combo1[] = {KC_N, KC_H, COMBO_END};
+const uint16_t PROGMEM test_combo2[] = {KC_C, KC_D, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(test_combo1, KC_ESC),
+    COMBO(test_combo2, LCTL(KC_Z)), // keycodes with modifiers are possible too!
 };
