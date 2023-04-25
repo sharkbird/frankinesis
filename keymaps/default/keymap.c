@@ -50,11 +50,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  
  [_MOUSE] = LAYOUT_kinesis(
 
-   XXXXXXX,       XXXXXXX,        XXXXXXX,        KC_MS_WH_UP,    LCTL(KC_X),  XXXXXXX,         XXXXXXX,        XXXXXXX,       XXXXXXX,        XXXXXXX,         XXXXXXX,       XXXXXXX,
-   LGUI(KC_Z),    LCTL(KC_Z),     KC_MS_BTN1,     KC_MS_UP,       KC_MS_BTN2,   KC_MS_BTN4,      KC_UP,         KC_F7,         KC_F8,          KC_F9,           KC_F10,        XXXXXXX,
-   KC_MS_BTN3,    KC_MS_WH_LEFT,  KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT, KC_MS_WH_RIGHT,  KC_DOWN,        KC_F4,         KC_F5,          KC_F6,           KC_F11,        XXXXXXX, 
-   LGUI(KC_Z),    LCTL(KC_Y),     SCTL(KC_V),     KC_MS_WH_DOWN,  LCTL(KC_V),  KC_MS_BTN5,      XXXXXXX,        KC_F1,         KC_F2,          KC_F3,           KC_F12,        XXXXXXX, 
-   KC_SCRL,       XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,     XXXXXXX,         XXXXXXX,        XXXXXXX,       XXXXXXX,        XXXXXXX,         XXXXXXX,       XXXXXXX, 
+   XXXXXXX,       XXXXXXX,        XXXXXXX,        KC_MS_WH_UP,    LCTL(KC_X),  XXXXXXX,         XXXXXXX,        XXXXXXX,       XXXXXXX,        XXXXXXX,         XXXXXXX,       RCS(KC_Y) ,
+   LGUI(KC_Z),    LCTL(KC_Z),     KC_MS_BTN1,     KC_MS_UP,       KC_MS_BTN2,   KC_MS_BTN4,      KC_UP,         KC_F7,         KC_F8,          KC_F9,           KC_F10,        LSFT(KC_F9),
+   KC_MS_BTN3,    KC_MS_WH_LEFT,  KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT, KC_MS_WH_RIGHT,  KC_DOWN,        KC_F4,         KC_F5,          KC_F6,           KC_F11,        LSFT(KC_F11), 
+   LGUI(KC_Z),    LCTL(KC_Y),     SCTL(KC_V),     KC_MS_WH_DOWN,  LCTL(KC_V),  KC_MS_BTN5,      XXXXXXX,        KC_F1,         KC_F2,          KC_F3,           KC_F12,        RCS(KC_F5), 
+   KC_SCRL,       XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,     XXXXXXX,         XXXXXXX,        XXXXXXX,       XXXXXXX,        XXXXXXX,         XXXXXXX,       LSFT(KC_F5), 
   KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,       KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
   KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,       KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
   KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,       KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS
