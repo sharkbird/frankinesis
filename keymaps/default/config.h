@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COMBO_COUNT 2
  
 #define CAPS_WORD_IDLE_TIMEOUT 5000
-#define TAPPING_TERM 220 
+#define TAPPING_TERM 240 
 #define IGNORE_MOD_TAP_INTERRUPT
 
  
