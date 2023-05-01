@@ -17,12 +17,12 @@
 #define HOME_O LALT_T(KC_O)
 #define HOME_E LSFT_T(KC_E)
 #define HOME_U LCTL_T(KC_U)
+#define HOME_I LT(_SYMNUM, KC_I)
+#define HOME_D LT(_SYMNUM, KC_D)
 #define HOME_H RCTL_T(KC_H)
 #define HOME_T RSFT_T(KC_T)
 #define HOME_N LALT_T(KC_N)
 #define HOME_S RGUI_T(KC_S)
-#define HOME_I LGUI_T(KC_I)
-#define HOME_D RGUI_T(KC_D)
 // Others
 #define COMPOSE    KC_RALT  // Compose key (used to input characters like á, ñ, ü).
 enum custom_keycodes {
@@ -35,8 +35,8 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_DVORAK] = LAYOUT_kinesis(
-  KC_ESC,         KC_1,           KC_2,           KC_3,           KC_4,                 KC_5,                   KC_6,           KC_7,           KC_8,          KC_9,           KC_0,            KC_SLSH,
-  KC_TAB,         KC_QUOT,        KC_COMM,        KC_DOT,         KC_P,                 KC_Y,                   KC_F,           KC_G,           KC_C,          KC_R,           KC_L,            KC_BSLS,
+  KC_ESC,         KC_1,           KC_2,           KC_3,           KC_4,                 KC_5,                   KC_6,           KC_7,           KC_8,          KC_9,           KC_0,            KC_BSLS,
+  KC_TAB,         KC_QUOT,        KC_COMM,        KC_DOT,         KC_P,                 KC_Y,                   KC_F,           KC_G,           KC_C,          KC_R,           KC_L,            KC_SLSH,
   KC_GRV,         HOME_A,         HOME_O,         HOME_E,        HOME_U,                HOME_I,                 HOME_D,         HOME_H ,       HOME_T ,       HOME_N ,        HOME_S ,         KC_MINS,
   KC_LSFT,        KC_SCLN,        KC_Q,           KC_J,           KC_K,                 KC_X,                   KC_B,           KC_M,           KC_W,          KC_V,           KC_Z,            KC_RSFT,
   KC_NO,          KC_LCTL,        KC_LGUI,        KC_LEFT,        KC_RIGHT,             KC_RIGHT,               KC_UP,          KC_UP,          KC_DOWN,       KC_LBRC,        KC_RCTL,          KC_NO,
