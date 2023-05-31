@@ -105,7 +105,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 };
-const uint16_t PROGMEM test_combo1[] = {KC_M, KC_V, COMBO_END};
+const uint16_t PROGMEM test_combo1[] = {KC_N, KC_H, COMBO_END};
 const uint16_t PROGMEM test_combo2[] = {KC_C, KC_D, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(test_combo1, KC_ESC),
